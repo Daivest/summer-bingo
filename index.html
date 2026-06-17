@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Летнее бинго</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f6f1e8;
+      --card: #ede4d7;
+      --ink: #4a4740;
+      --muted: #777066;
+      --line: #d7cbbd;
+      --sage: #9cad93;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.58), transparent 24%),
+        radial-gradient(circle at 76% 82%, rgba(255, 255, 255, 0.42), transparent 26%),
+        linear-gradient(135deg, var(--page), #eee6da);
+    }
+
+    main {
+      width: min(100%, 720px);
+      padding: clamp(24px, 6vw, 56px);
+      border: 1px solid var(--line);
+      background: rgba(246, 241, 232, 0.76);
+      box-shadow: 0 22px 70px rgba(74, 71, 64, 0.11);
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      font: 600 12px/1.2 system-ui, sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 10ch;
+      font-size: clamp(44px, 11vw, 92px);
+      line-height: 0.94;
+      font-weight: 400;
+    }
+
+    .lead {
+      max-width: 52ch;
+      margin: 28px 0 34px;
+      font-size: clamp(18px, 2.6vw, 23px);
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cell {
+      min-height: 84px;
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      text-align: center;
+      font: 500 14px/1.3 system-ui, sans-serif;
+    }
+
+    .cell.done {
+      background: var(--sage);
+      color: #fffdf8;
+    }
+
+    footer {
+      margin-top: 28px;
+      font: 14px/1.5 system-ui, sans-serif;
+      color: var(--muted);
+    }
+
+    @media (max-width: 560px) {
+      .board {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">GitHub Pages demo</p>
+    <h1>Летнее бинго</h1>
+    <p class="lead">
+      Тестовый индекс для проверки публикации проекта. Полная интерактивная версия появится здесь позже.
+    </p>
+
+    <ul class="board" aria-label="Демо-сетка летнего бинго">
+      <li class="cell done">Солнце</li>
+      <li class="cell">Трава</li>
+      <li class="cell">Вода</li>
+      <li class="cell">Тень</li>
+      <li class="cell">Ветер</li>
+      <li class="cell done">Свет</li>
+      <li class="cell">Пауза</li>
+      <li class="cell">Тепло</li>
+    </ul>
+
+    <footer>
+      Статический HTML, готовый для первого коммита и публикации через GitHub Pages.
+    </footer>
+  </main>
+</body>
+</html>
